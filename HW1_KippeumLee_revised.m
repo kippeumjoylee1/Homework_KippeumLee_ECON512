@@ -86,6 +86,7 @@ A
 % imported data set is 4389
 
 % Your approach implictly assumes that there are no NaNs in the data:
+% Consider following the procedure used in the answer key.
 
 n = 4389;
 id = datahw1(:,1);
@@ -111,5 +112,4 @@ cov = (X'*X)\(X'*res2)*(X'*res2)'/(X'*X); % covariance matrix
 stderror = diag(cov); % standard errors
 tvalue = b./sqrt(stderror); % t values
 stderror
-
 
