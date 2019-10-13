@@ -8,7 +8,7 @@ Da = @(v,p) exp( one*( v - p ) )/( 1 + exp( one*( v - p ) ) + exp( two*( v - p )
 Db = @(v,p) exp( two*( v - p ) )/( 1 + exp( one*( v - p ) ) + exp( two*( v - p ) ) );
 
 % Q1
-
+% GOOD
 % When v_A = v_B = 2, the demand for each option if p_A = p_B = 1 is,
 % D_A = e/(1+2e), D_B = e/(1+2e), D_0 = 1/(1+2e)
 p1 = [ 1 ; 1 ];
@@ -17,6 +17,8 @@ Db(v,p1)
 (1 - Da(v,p1) - Db(v,p1))
 
 % Q2 : Broyden's method
+
+% YOU DIDNT UPLOAD MYJAC FUNCTION. USE BROYDEN FUNCTION DIRECTLY
 
 p = [ 0.2 ; 1.2 ];
 fVal = foc(v,p);
@@ -44,7 +46,8 @@ fVal
 p
 
 % Q3 : Gauss - Sidel method
-
+% VERY GOOD. ALSO, SUBITERATIONS DONT HAVE TO BE THE SAME AS OUTER
+% ITERATIONS
 p1 = 0.2;
 p2 = 1.2;
 
@@ -110,6 +113,7 @@ end
 % FOC_b = 0 given p1.
 
 % Q4
+% GOOD
 
 p = [0.2,1.2];
 
@@ -133,6 +137,7 @@ p
 % demand function, thus more fluctuate since its step size is big. 
 
 % Q5
+% SAME COMMENT AS ABOVE
 
 va = 2;
 ppp = [ 0 0 ];
