@@ -1,5 +1,7 @@
 %% HW3
 
+%%% NICELY DONE! CHECK PLUS!
+
 % Q1
 
 b1 = [-0.5 -0.5 -0.5 -0.5 -0.5 -0.5]';
@@ -15,7 +17,7 @@ BHAT4 = [];
 
 for b0 = [b1 b2 b3 b4 b5];
 
-likelihood = @(b) -sum( -exp( X*b ) + y.*( X*b ) - log(factorial(y)) );
+likelihood = @(b) -sum( -exp( X*b ) + y.*( X*b ) - log(factorial(y)) ); % YOU CAN DROP THE FACTORIAL. INCREASE SPEED
 
 options = optimset('PlotFcns',@optimplotfval,'Display','iter');
 bhat1 = fminsearch(likelihood,b0,options);
@@ -57,3 +59,5 @@ BHAT4
 % Thus, I can rank method1 > method3 > method2 > method1 in order of
 % robustness. But for time to convergence, you can easily check method2 >
 % method3 > method1,method4
+
+%%% INTERESTING CONCLUSIONS
