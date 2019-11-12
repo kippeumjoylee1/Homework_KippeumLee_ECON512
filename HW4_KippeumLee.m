@@ -1,4 +1,8 @@
+% Nicely done. You get a check plus!
+
 %% Q1
+
+% HALTON SEQUENCE. NICE
 
 clear;
 
@@ -25,6 +29,7 @@ sum1 = 4*sum1;
 
 %% Q2
 
+% Easier if you use qnwtrap!
 h = 1/n;
 
 x = 0:h:1;
@@ -63,6 +68,8 @@ sum2 = 4*sum2;
 
 %% Q3
 
+% Make sure that you dont choose an x greater than 1
+
 x = haltonseq(n,1);
 
 sum3 = 0;
@@ -79,6 +86,8 @@ sum3 = 4*sum3;
 
 
 %% Q4
+
+% As before, qnwtrap is more convenient!
 
 h = 1/n;
 
@@ -98,6 +107,7 @@ sum4 = 4*sum4;
 
 %% Q5
 
+% Nice analysis!
 
 MSE1n = [];
 MSE2n = [];
