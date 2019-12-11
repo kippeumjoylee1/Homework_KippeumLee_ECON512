@@ -16,11 +16,15 @@ for i = 1:100
     zi = Z(:,i);
     f = @(b) prod( ( F( b*xi + gamma*zi ).^(yi) ).*( (1 - F( b*xi + gamma*zi )).^( 1 - yi ) ) );
     % For pseudo random number, I will use [-100,100] as an interval
+    
+    % Why -10 and 20?
     rnd = -10 + 20*rand(100,1);
     integral = 0;
     for r = 1:100
         integral = integral + f( rnd(r,1) )*normpdf(rnd(r,1),mu,var);
     end
+    
+    % WHY MULTIPLIED BY 20?
     integral = (20/100)*integral;
     loglikelihood2 = loglikelihood2 + log(integral);
 end

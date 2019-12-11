@@ -1,3 +1,4 @@
+% MAximize over the Cholesky decomposition, not the components of sigma!
 function loglike = likeliMC(gamma,mu,muu,var_mu,var_u,var_muu)
     
     data = load('C:\Users\padag\Documents\MATLAB\hw5.mat');
